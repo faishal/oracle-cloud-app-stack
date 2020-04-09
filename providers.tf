@@ -6,4 +6,5 @@ provider "oci" {
   private_key          = var.private_key
   region               = var.region
   private_key_password = var.private_key_password
+  version              = "~> 3.69"
 }

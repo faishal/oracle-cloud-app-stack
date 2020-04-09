@@ -252,10 +252,6 @@ resource "oci_load_balancer_listener" "load_balancer_listener1" {
   }
 }
 
-output "lb_public_ip" {
-  value = ["${oci_load_balancer.free_load_balancer.ip_address_details}"]
-}
-
 data "oci_core_vnic_attachments" "app_vnics" {
   compartment_id      = "${local.compartment_ocid}"
   availability_domain = "${data.oci_identity_availability_domain.ad.name}"
@@ -272,10 +268,6 @@ data "oci_core_images" "test_images" {
 
   #Optional
   shape = "VM.Standard.E2.1.Micro"
-}
-
-output "app" {
-  value = "http://${data.oci_core_vnic.app_vnic.public_ip_address}"
 }
 
 data "oci_database_autonomous_databases" "test_autonomous_databases" {

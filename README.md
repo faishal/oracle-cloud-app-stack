@@ -44,13 +44,15 @@ pre-commit run -a
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| oci | ~> 3.69 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| oci | n/a |
+| oci | ~> 3.69 |
 
 ## Inputs
 
@@ -70,8 +72,7 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
-| app | n/a |
-| lb\_public\_ip | n/a |
-| show-ads | n/a |
+| app | App url pointing to instance |
+| lb\_public\_ip | Loadbalancer public IP |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
